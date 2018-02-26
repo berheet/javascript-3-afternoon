@@ -66,8 +66,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
   (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
 */
 
-//Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+var totalPopulation = populations.reduce((final, number, populations) => final + number);
 
 
 
@@ -87,15 +86,13 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 /*
   Now we're going to ramp these up a little bit.
-  Instead of just arrays of numbers, we are going to have array of objects that we want to use map, filter, and reduce with.
+  Instead of just arrays of numbers, we are going to have array of objects that we want to use map, 
+  filter, and reduce with.
 
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
-//Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
-
+let myStrongest = monstersInYourPocket.filter(element => element.CP > 200);
 
 ////////// PROBLEM 5 //////////
 
