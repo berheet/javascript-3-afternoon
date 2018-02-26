@@ -44,7 +44,8 @@ var employees = [
 // Do not edit the code above.
 
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will 
+  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater 
+  will 
   loop over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
@@ -53,11 +54,16 @@ var employees = [
 
 function employeeUpdater(){
   for(var i = 0; i < employees.length; i++){
-  if(employees.firstName === "Theo"){
-    delete employees[i]
-  }
+  if(employees[i].firstName === "Theo"){
+    employees.splice(i,1)
+  } else if(
+    employees[i].firstName === "Lorie") {
+      employees[i].department = "HR"
+    }
 }
+return employees;
 }
+
 
 
 
@@ -145,7 +151,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(obj){
+  for(var key in obj) {
+    obj[key].atFaultForAccident = false;
+  }
+}
 
 
 
@@ -164,6 +174,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(arr){
+  for (var i = 0; i < arr.length; i++){
+    for (var j = 0; j < arr[i].length; j++){
+      arr[i][j] = (arr[i][j]) % 2 === 0 ? "true": "false";
+    }
+  }
+}  
+
 
 
